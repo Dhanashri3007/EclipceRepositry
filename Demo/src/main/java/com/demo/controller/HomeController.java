@@ -49,6 +49,6 @@ public class HomeController {
 	public ResponseEntity<User> updateUser(@RequestBody User u,@PathVariable int uid)
 	{
 		User ur=hi.update(uid,u);
-		return null;
+		return new ResponseEntity<User>(ur,HttpStatus.OK);
 	}
 }
